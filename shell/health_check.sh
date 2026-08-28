@@ -13,7 +13,7 @@ check_memory() {
     echo "=============================="
     free -h
 }
-
+# test comment
 check_processes() {
     echo "=============================="
     echo "PROCESS CHECK"
