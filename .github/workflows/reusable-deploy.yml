@@ -1,0 +1,36 @@
+name: Reusable Deployment
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Deployment
+        run: |
+          echo "=============================="
+          echo "Starting deployment"
+          echo "Environment: ${{ inputs.environment }}"
+          echo "=============================="
+
+      - name: Build Application
+        run: |
+          echo "Building application..."
+
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+
+      - name: Deploy Application
+        run: |
+          echo "Deploying application to ${{ inputs.environment }}"
+
+      - name: Deployment Complete
+        run: |
+          echo "Deployment to ${{ inputs.environment }} completed successfully."

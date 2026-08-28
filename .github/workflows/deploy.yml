@@ -1,0 +1,21 @@
+name: Deploy Application
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  deploy-dev:
+    uses: ./.github/workflows/reusable-deploy.yml
+    with:
+      environment: DEV
+
+  deploy-uat:
+    uses: ./.github/workflows/reusable-deploy.yml
+    with:
+      environment: UAT
+
+  deploy-prod:
+    uses: ./.github/workflows/reusable-deploy.yml
+    with:
+      environment: PROD
