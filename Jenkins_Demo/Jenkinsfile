@@ -1,0 +1,26 @@
+@Library('jenkins-demo') _
+
+pipeline {
+    agent any
+
+    stages {
+
+        stage('DEV') {
+            steps {
+                deployApplication('DEV')
+            }
+        }
+
+        stage('UAT') {
+            steps {
+                deployApplication('UAT')
+            }
+        }
+
+        stage('PROD') {
+            steps {
+                deployApplication('PROD')
+            }
+        }
+    }
+}
