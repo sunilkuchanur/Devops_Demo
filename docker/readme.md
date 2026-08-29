@@ -202,23 +202,3 @@ COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
-
----
-
-# Summary
-
-Dockerfiles provide three important benefits:
-
-### Automation
-
-The Dockerfile defines the steps required to build the application image, allowing the process to be executed automatically and consistently.
-
-### Reusability
-
-The same Dockerfile can be used across development, testing, CI/CD, and production environments.
-
-### Maintainability
-
-A well-structured Dockerfile is easier to understand, modify, troubleshoot, review, and maintain.
-
-> Dockerfile provides automation because the image creation process is defined as code. It provides reusability because the same Dockerfile can be used across development, testing, and production environments. It improves maintainability because the application environment, dependencies, and startup instructions are version-controlled and clearly defined.
